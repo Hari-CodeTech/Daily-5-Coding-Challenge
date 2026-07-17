@@ -1,79 +1,39 @@
-package com.Methods;
-import java.util.*;
+package com.ClassAndObjectTask;
+
 public class Student {
-	Scanner sc=new Scanner(System.in);
-	int total;
-	double average;
-	char Grade;
-	int java; int mysql; int aptitude ;int english ; int softSkills;
+	static {
+		System.out.println("Student Management System Started");
+		
+	}
+	{
+		System.out.println("Student Object Created");
+	}
+	int id;
+	String name;
+	String course;
 	
-	public void  acceptMarks(int java, int mysql, int aptitude ,int english , int softSkills){
-		System.out.println("The 5 subject marks were imported");
-		this.java=java;
-		this.mysql=mysql;
-		this.aptitude=aptitude;
-		this.english=english;
-		this.softSkills=softSkills;
+
+	public static void main(String[] args) {
+		Student stunum1=new Student();
+		stunum1.id=101;
+		stunum1.name="Ravi";
+		stunum1.course="Java";
 		
-	}
-	public void calculateTotal(){
-		System.out.println("Total marks of this 5 Subjects  are : "+" ");
-		total=java+ mysql + aptitude +english + softSkills;
-		System.out.println(total);
-	}
-	public void calculateAverage() {
-		System.out.println("Average of the Total: "+" ");
-		average=total/5.0;
-		System.out.println(average);
+		Student stunum2=new Student();
+		stunum2.id=102;
+		stunum2.name="Priya";
+		stunum2.course="Python";
 		
-	}
-	public void findGrade() {
-		System.out.println("Grade of the total:"+" ");
-		if(average>=90) {
-			System.out.println('A');
-		}
-		else if(average>=80) {
-			System.out.println('B');
-		}
-		else if(average>=70) {
-			System.out.println('C');
-		}
-		else if(average>=60) {
-			System.out.println('D');
-		}
-		else {
-			System.out.println("Fail");
-		}
-	}
-	public void displayResult() {
-
-	    System.out.println("\n===== STUDENT RESULT =====");
-
-	    System.out.println("Java Marks        : " + java);
-	    System.out.println("MySQL Marks       : " + mysql);
-	    System.out.println("Aptitude Marks    : " + aptitude);
-	    System.out.println("English Marks     : " + english);
-	    System.out.println("Soft Skills Marks : " + softSkills);
-
-	    System.out.println("-----------------------------");
-
-	    System.out.println("Total Marks       : " + total);
-	    System.out.println("Average           : " + average);
-	    System.out.println("Grade             : " + Grade);
-
-	    System.out.println("=============================");
+		System.out.println("Student 1");
+		System.out.println(stunum1.id);
+		System.out.println(stunum1.name);
+		System.out.println(stunum1.course);
 		
-	}
-
-	public  static void main(String[] args) {
-		Student s=new Student();
-		s.acceptMarks(90,88,76,99,98);
-		s.calculateTotal();
-		s.calculateAverage();
-		s.findGrade();
-		s.displayResult();
-		
-
+		System.out.println();
+		System.out.println("Student 2");
+		System.out.println(stunum2.id);
+		System.out.println(stunum2.name);
+		System.out.println(stunum2.course);
 	}
 
 }

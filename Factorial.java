@@ -1,18 +1,16 @@
-package com.Loops;
-import java.util.*;
-public class Factorial {
+package com.RecursiveFunction;
 
-	public static void main(String[] args) {
-		System.out.println("Enter the given Number : "+" ");
-		Scanner sc=new Scanner(System.in);
-		int n=sc.nextInt();
-		int result=1;
-		
-		for(int i=1;i<=n;i++) {
-			result=result*i;
+public class Factorial {
+	static int fact(int n) {
+		if(n==1) {
+			return 1;
 		}
-		System.out.println(result);
-	
+		return n*fact(n-1);
+	}
+	public static void main(String[] args) {
+		int res=fact(6);
+		System.out.println(res);
+
 	}
 
 }
